@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'affichage</title>
+</head>
+<body>
+    <h1>Formulaire</h1>
+
+    <!-- Formulaire avec les champs Nom et Prénom -->
+    <form id="formulaire">
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" required><br><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" id="prenom" name="prenom" required><br><br>
+
+        <!-- Bouton pour afficher les valeurs saisies -->
+        <button type="button" onclick="afficherValeurs()">Afficher</button>
+    </form>
+
+    <script>
+     
+        function afficherValeurs() {
+           
+            
+             nom = document.getElementById('nom').value;
+            
+             prenom = document.getElementById('prenom').value;
+
+           
+            
+            alert("Nom : " + nom + "\nPrénom : " + prenom);
+        }
+    </script>
+</body>
+</html>

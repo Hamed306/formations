@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie</title>
+</head>
+
+<body>
+    <div id="galerie" class="galerie"></div>
+    <script>
+        class Galerie {
+            constructor(conteneur) {
+                this.conteneur = conteneur;
+                this.urlImages = [];
+            } ajouterImage(url) {
+                this.urlImages.push(url);
+            } regenerer() {
+                var html = '';
+                // génération des éléments <img> dans le conteneur
+                for (var i = 0; i < this.urlImages.length; i++) {
+                    html = html + '<img src="' + this.urlImages[i] + '" >;';
+                }
+                this.conteneur.innerHTML = html;
+            }
+        } var maGalerie = new Galerie(document.getElementById('galerie'));
+        maGalerie.ajouterImage('tunisia1.jpg'); maGalerie.regenerer();
+    </script> <input type="button" onclick="maGalerie.regenerer()" value="regenerer">
+
+
+</body>
+
+</html>

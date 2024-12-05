@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compteur de caractères</title>
+    <style>
+        #compteur {
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Compteur de caractères</h1>
+
+   
+    <textarea id="zoneTexte" rows="5" cols="50" placeholder="Tapez du texte ici..."></textarea><br>
+
+    
+    <p>Nombre de caractères : <span id="compteur">0</span></p>
+
+    <script>
+      
+         zoneTexte = document.getElementById('zoneTexte');
+        compteur = document.getElementById('compteur');
+
+      
+        zoneTexte.addEventListener('input', function() {
+           
+            compteur.textContent = zoneTexte.value.length;
+        });
+    </script>
+</body>
+</html>

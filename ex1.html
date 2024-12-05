@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* var nom = prompt("veillez saisir votre nom:)");
+           alert("bonjour"+nom+"!bienvenue dans le monde de javascript") */
+        /*         let num1 = Number(prompt("Entrez le premier nombre :"));
+                let num2 = Number(prompt("Entrez le deuxième nombre :"));
+                console.log(`Somme : ${num1 + num2}`);
+                console.log(`Produit : ${num1 * num2}`);
+                console.log(`Différence : ${num1 - num2}`); */
+        /*         let maVariable = 10
+                maVariable = "Bonjour"
+                console.log('Le contenu de maVariable est : '+ maVariable); */
+        /*        var saisie = prompt('Que veux-tu dire ?');
+               if (saisie === 'bonjour') {
+                   alert('Bonjour à toi !');
+               } else if (saisie === 'tu vas bien ?') {
+                   alert('Bien, et toi ?');
+               } else {
+                   alert("Je ne comprends pas.");
+               } */
+
+
+        /*         var etat = prompt('Comment te sens-tu ? (bien/mal)');
+                if (etat === 'bien') {
+                    var parler = prompt('Super ! Tu veux parler d\'autre chose ? (oui/non)');
+                    if (parler === 'oui') {
+                        alert('OK, que veux-tu savoir ?');
+                    } else {
+                        alert('D\'accord, bonne journée !');
+                    }
+                } else if (etat === 'mal') {
+                    var enParler = prompt('Oh, désolé de l\'entendre. Tu veux en parler ? (oui/non)');
+                    if (enParler === 'oui') {
+                        alert('Je suis là pour toi.');
+                    } else {
+                        alert('Je comprends, courage !');
+                    }
+                } else {
+                    alert("Je ne comprends pas.");
+                } */
+        /*        function multipleTrois(nombre) {
+                   return nombre % 3 == 0;
+               }
+               function multipleCind(nombre) {
+                   return nombre % 5 == 0;
+               }
+               for (let i = 1; i < 200; i++)
+                   if (multipleCind(i) && multipleTrois(i)) {
+                       console.log(`${i} est FizzBUZZ`);
+                   } else if (multipleCind(i)) {
+                       console.log(`${i} est BUZZ`);
+                   } else if (multipleTrois(i)) {
+                       console.log(`${i} est FIZZ`);
+                   } */
+
+        /*      x=Math.round(Math.random()*100);
+             for (let i = 1; i <= 10; i++){
+             var num1 = Number(prompt("Entrez  nombre :"));
+ 
+             if (num1<x) {
+                 console.log(`plus grand`);
+                 
+             }else if (num1>x) {
+                 console.log(`plus petit`);
+                 
+             }else if (num1==x) {
+                 console.log(`bravo`);
+                 
+             }
+         } */
+
+        // Fonction pour comparer les choix et déterminer le gagnant
+        /* function comparer(choix1, choix2) {
+           if (choix1 === choix2) {
+               return "aucun"; // Égalité
+           }
+           if (
+               (choix1 === "pierre" && choix2 === "ciseaux") ||
+               (choix1 === "ciseaux" && choix2 === "papier") ||
+               (choix1 === "papier" && choix2 === "pierre")
+           ) {
+               return "joueur"; // Le joueur gagne
+           }
+           return "ordi"; // L'ordinateur gagne
+        }
+        // Variables pour le score
+        let scoreOrdi = 0;
+        let scoreJoueur = 0;
+        // Boucle pour 3 manches
+        for (let manche = 1; manche <= 3; manche++) {
+           console.log(`Manche ${manche}`);
+           // Générer un choix aléatoire pour l'ordinateur
+           const choixPossibles = ["pierre", "papier", "ciseaux"];
+           const choixOrdi = choixPossibles[Math.floor(Math.random() * 3)];
+           // Demander le choix du joueur
+           let choixUtilisateur = prompt("Choisissez entre pierre, papier ou ciseaux :").toLowerCase();
+           // Valider l'entrée de l'utilisateur
+           while (!choixPossibles.includes(choixUtilisateur)) {
+               choixUtilisateur = prompt("Entrée invalide. Choisissez entre pierre, papier ou ciseaux :").toLowerCase();
+           }
+           // Comparer les choix
+           const resultat = comparer(choixUtilisateur, choixOrdi);
+           // Afficher les choix et le résultat
+           console.log(`Joueur : ${choixUtilisateur} - Ordinateur : ${choixOrdi}`);
+           if (resultat === "joueur") {
+               console.log("Le joueur remporte la manche !");
+               scoreJoueur++;
+           } else if (resultat === "ordi") {
+               console.log("L'ordinateur remporte la manche !");
+               scoreOrdi++;
+           } else {
+               console.log("Égalité !");
+           }
+        }
+        // Afficher le score final
+        console.log(`Score final - Joueur : ${scoreJoueur}, Ordinateur : ${scoreOrdi}`);
+        // Déterminer le gagnant de la partie
+        if (scoreJoueur > scoreOrdi) {
+           console.log("Le joueur remporte la partie !");
+        } else if (scoreOrdi > scoreJoueur) {
+           console.log("L'ordinateur remporte la partie !");
+        } else {
+           console.log("Match nul !");
+        } */
+
+        /*var jours =['lun','007','mer','jeu','ven','sam','BUG'];
+        var j =jours.pop();
+        console.log(jours)*/
+
+        
+      /*   var annuaire = {
+         "Alice": "123-456-789",
+       "Bob": "987-654-321",
+       "Charlie": "555-555-555",
+       "Diane": "111-222-333"
+};
+
+
+function ajouterContact() {
+     nom = prompt("Entrez le nom du contact à ajouter :");
+     numero = prompt("Entrez le numéro de téléphone du contact :");
+    annuaire[nom] = numero;
+
+
+    alert(`Le contact ${nom} a été ajouté avec le numéro ${numero}.`);
+}
+function supprimerContact() {
+    nom = prompt("Entrez le nom du contact à supprimer :");
+    if (annuaire[nom]) {
+        delete annuaire[nom];
+        alert(`Le contact ${nom} a été supprimé.`);
+    } else {
+        alert(`Aucun contact trouvé pour ${nom}.`);
+    }
+}
+
+
+function rechercherContact() {
+    nom = prompt("Entrez le nom du contact à rechercher :");
+    if (annuaire[nom]) {
+        alert(`Le numéro de téléphone de ${nom} est : ${annuaire[nom]}`);
+    } else {
+        alert(`Aucun contact trouvé pour ${nom}.`);
+    }
+}
+
+function afficherListe() {
+    if (Object.keys(annuaire).length === 0) {
+        alert("L'annuaire est vide.");
+    } else {
+        let liste = "";
+        for (let nom in annuaire) {
+            liste += `${nom} : ${annuaire[nom]}\n`;
+        }
+        alert("Liste des contacts :\n" + liste);
+    }
+}
+
+function menu() {
+    while (true) {
+        const choix = prompt(`
+Que souhaitez-vous faire ?
+- Appuyez sur 'r' pour rechercher un contact.
+- Appuyez sur 'l' pour afficher la liste des contacts.
+- Appuyez sur 'a' pour ajouter un contact.
+- Appuyez sur 's' pour supprimer un contact.
+- Appuyez sur 'q' pour quitter.
+Votre choix :`).toLowerCase();
+
+        if (choix === 'r') {
+            rechercherContact();
+        } else if (choix === 'l') {
+            afficherListe();
+        } else if (choix === 'a') {
+            ajouterContact();
+        } else if (choix === 's') {
+            supprimerContact();
+        } else if (choix === 'q') {
+            alert("Au revoir !");
+            break;
+        } else {
+            alert("Choix invalide, veuillez réessayer.");
+        }
+    }
+}
+
+menu(); */
+
+
+
+
+    </script>
+</body>
+
+</html>

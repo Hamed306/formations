@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'inscription des participants</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: block;
+        }
+        input[type="text"], input[type="email"], input[type="number"], select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 20px 0;
+        }
+        th, td {
+          border: 1px solid #ccc;
+          padding: 10px;
+          text-align: left;
+        }
+        th {
+          background-color: #F4F4F4
+;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Register des Participants</h1>
+        <form action="/submit" method="POST">
+            <div>
+                <label for="Name">name :</label>
+                <input type="text" id="Name" name="Name" required placeholder="Entrez votre Name">
+            </div>
+
+            <div>
+                <label for="Age">Age :</label>
+                <input type="text" id="Age" name="Age" required placeholder="Entrez votre Age">
+            </div>
+            <div>
+                <label for="email">E-mail :</label>
+                <input type="email" id="email" name="email" required placeholder="Entrez votre e-mail">
+            </div>
+            <button type="submit" id="submitBtn">Add Participant</button>
+        </form>
+    </div>
+    <div>
+    <table id="dataTable" style="display: none;">
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Âge</th>
+                <th>E-mail</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+           
+        </tbody>
+    </table>
+</div>
+<script>
+    
+    const submitBtn = document.getElementById('submitBtn');
+    const dataTable = document.getElementById('dataTable');
+    const nameInput = document.getElementById('Name');
+    const ageInput = document.getElementById('Age');
+    const emailInput = document.getElementById('email');
+
+    
+    submitBtn.addEventListener('click', function() {
+        
+        const name = nameInput.value;
+        const age = ageInput.value;
+        const email = emailInput.value;
+
+        
+        if (name && age && email) {
+          
+            dataTable.style.display = 'table';
+
+            
+            const newRow = document.createElement('tr');
+
+           
+            newRow.innerHTML = `
+                <td>${name}</td>
+                <td>${age}</td>
+                <td>${email}</td>
+                <td> <button   class="remove-btn" >Remove</button></td>
+            `;
+
+           
+            dataTable.querySelector('tbody').appendChild(newRow);
+
+           
+           
+        } else {
+            alert("Veuillez remplir tous les champs.");
+        }
+    });
+
+
+   
+
+
+</script>
+</body>
+</html>
